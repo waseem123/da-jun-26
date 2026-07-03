@@ -1,0 +1,6 @@
+Data Manipulation Language
+1. INSERT - to insert a new data (new record) to the table
+2. UPDATE - to change the existing data or values (for all / single / many fields)
+		 of the table
+3. DELETE - to delete single or multiple
+	 record / tuple / row from a table

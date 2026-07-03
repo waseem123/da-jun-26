@@ -1,0 +1,12 @@
+ALTER command - 
+ - Add new column to a table
+ - Remove existing column from a table
+ - Modify column in a table
+	* Change Datatype
+	* Change Size
+	* Rename
+	* Add or remove constraint
+
+ALTER TABLE <TABLE_NAME> ADD COLUMN <column_name> datatype(size) cosntraint;
+
+ALTER TABLE <TABLE_NAME> DROP COLUMN <column_name>;

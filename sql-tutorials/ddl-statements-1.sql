@@ -15,7 +15,10 @@ CREATE TABLE tbl_dept(
 );
 
 show tables;
-
+describe tbl_employee;
 describe tbl_dept;
+
+
+
 
   

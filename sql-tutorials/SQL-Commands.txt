@@ -1,0 +1,34 @@
+1. Data Definition Language (DDL)
+	a. CREATE
+		database, table, functions, procedures, triggers, transactions
+	b. ALTER
+		Add column, modify column, delete column, rename
+	c. TRUNCATE
+		Empty the table
+	d. DROP
+		Delete the entire table and its structure,
+		delete - functions, procedures, triggers, transactions
+	e. RENAME
+		Rename the table, functions, procedures, trigggers, transactions
+
+2. Data Manipulation Language (DML)
+	a. INSERT
+	b. UPDATE
+	c. DELETE
+
+3. Data Query Language (DQL)
+	a. SELECT
+
+4. Data Control Language (DCL)
+	a. GRANT
+	b. REVOKE
+
+______________________________________________________________________
+
+CREATE TABLE <TABLE_NAME>(
+	column_1 datatype(size) [constraint],
+	column_2 datatype(size) [constraint],
+	......
+	column_N datatype(size) [constraint],
+
+);
