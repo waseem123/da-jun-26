@@ -7,5 +7,12 @@ Data Manipulation Language (DML) Statements -
 3. Data Deletion
 	- DELETE : To delete existing data from the database table
 
-Data while inserting and deleting - One or Many R ows
+Data while inserting and deleting - One or Many Rows
 Data while updating - one or many values from one or many rows
+
+
+UPDATE <table_name> SET 
+	column_1 = value, 
+	column_2 = value
+	... 
+	column_n = value;
