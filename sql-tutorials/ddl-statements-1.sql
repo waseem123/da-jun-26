@@ -14,6 +14,8 @@ CREATE TABLE tbl_dept(
 	dept_building varchar(1)
 );
 
+ALTER TABLE tbl_employee ADD COLUMN emp_dept varchar(30);
+
 show tables;
 describe tbl_employee;
 describe tbl_dept;
