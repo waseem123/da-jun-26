@@ -99,6 +99,39 @@ ALTER TABLE tbl_product
 	ADD COLUMN shop_id int,
 	ADD FOREIGN KEY (shop_id) references tbl_shop(shop_id);
     
-SELECT * FROM tbl_product;
+
 UPDATE tbl_product set shop_id = 4
 WHERE shop_id IS NULL;
+
+SELECT * FROM tbl_shop;
+SELECT * FROM tbl_product;
+SELECT * FROM tbl_category;
+
+SELECT p.product_name,
+	s.shop_name
+FROM tbl_product as p
+JOIN tbl_shop as s
+ON p.shop_id = s.shop_id;
+
+SELECT p.product_name,
+	c.category_name,
+    s.shop_name
+FROM tbl_product as p
+JOIN tbl_category as c
+ON p.category_id = c.category_id
+JOIN tbl_shop as s
+ON p.shop_id = s.shop_id;
+
+SELECT s.shop_name,
+	count(p.product_id)
+FROM tbl_shop as s
+JOIN tbl_product as p
+ON s.shop_id = p.shop_id
+GROUP BY s.shop_name;
+
+SELECT s.shop_name,
+    max(p.product_price)
+FROM tbl_shop as s
+JOIN tbl_product as p
+ON s.shop_id = p.shop_id
+GROUP BY s.shop_name;
