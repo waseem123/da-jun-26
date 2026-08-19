@@ -4,6 +4,7 @@ SHOW TABLES;
 SELECT * FROM tbl_employee;
 SELECT * FROM tbl_dept;
 
+
 ALTER TABLE tbl_employee
 	ADD COLUMN dept_id int,
     ADD FOREIGN KEY(dept_id) references tbl_dept(dept_id);
@@ -34,3 +35,21 @@ ON e.dept_id = d.dept_id
 GROUP BY d.dept_name
 HAVING COUNT(e.emp_id)>2
 ORDER BY COUNT(e.emp_id);
+
+
+SELECT d.dept_name,
+	round(COALESCE(avg(e.emp_salary),0),0)
+FROM tbl_dept as d
+LEFT JOIN tbl_employee as e
+ON d.dept_id = e.dept_id
+GROUP BY d.dept_name
+ORDER BY avg(e.emp_salary);
+
+SELECT d.dept_name,
+	max(e.emp_salary)
+FROM tbl_dept as d
+LEFT JOIN tbl_employee as e
+ON e.dept_id = d.dept_id
+WHERE e.emp_gender = 'Male'
+GROUP BY d.dept_name;
+
