@@ -42,3 +42,5 @@ SELECT product_name,product_price
             ON c.category_id = p.category_id
             WHERE c.category_name='Furniture'
     );
+    
+
